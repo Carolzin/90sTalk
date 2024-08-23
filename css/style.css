@@ -1,57 +1,69 @@
+/* Reseta paddings e margins para todos os elementos */
 * {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
-body {  		
+/* Estilos gerais para o body e form */
+body, form {
     background-color: #F8E8C4;  
-    font-family: 'Montserrat', sans-serif; /* Aplica a fonte Montserrat ao corpo todo */	
- }    
-
-nav {
-    background-color: #ffffff; /* Cor de fundo */
-    padding: 20px; /* Espaçamento interno maior */
-    height: 80px; /* Altura da barra de navegação */
-    width: 100%; /* Largura total do contêiner */
-    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+    font-family: 'Montserrat', sans-serif; 
 }
 
+/* Estilos para a barra de navegação */
+nav {
+    background-color: #ffffff; 
+    padding: 20px; 
+    height: 80px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    position: fixed; /* Fixar a navbar no topo */
+    top: 0; /* Alinhar ao topo da página */
+    left: 0; /* Alinhar à esquerda da página */
+    z-index: 1000; /* Garantir que a navbar fique acima de outros conteúdos */
+}
+
+/* Estilos para a lista de navegação */
 nav ul {
-    list-style-type: none; /* Remove marcadores de lista */
-    display: flex; /* Alinha os itens em linha */
-    align-items: center; /* Alinha verticalmente os itens */
-    height: 100%; /* Altura do contêiner flexível */
+    list-style-type: none;
+    display: flex; 
+    align-items: center; 
+    height: 100%; 
 }
 
 nav ul li {
-    margin-right: 50px; /* Espaço entre os itens */
+    margin-right: 50px;
 }
 
-
 nav ul li a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #533D3D; /* Define a cor do texto dos links */
-    font-weight: bold; /* Deixa o texto em negrito */
-    font-size: 20px; /* Tamanho da fonte dos links */
-    
-    line-height: 1.5; /* Altura da linha para aumentar o espaço vertical */
+    text-decoration: none; 
+    color: #533D3D;
+    font-weight: bold; 
+    font-size: 20px; 
+    line-height: 1.5; 
 }
 
 nav ul li a:hover {
-    color: #EE4823; /* Cor ao passar o mouse sobre o link */
+    color: #EE4823; 
 }
 
+/* Logo */
 .logo {
-    margin-right: auto; /* Empurra a logo para a esquerda */
+    margin-right: auto; 
 }
 
 .logo img {
-    height: 80px; /* Ajusta a altura da imagem da logo */
-    /* Largura automática para manter a proporção */
+    height: 80px; 
     padding-top: 15px;
     padding-left: 10px;
 }
 
+/* Ajusta o padding do body para evitar que o conteúdo fique atrás da navbar fixa */
+body {
+    padding-top: 80px; /* Ajuste conforme a altura da navbar */
+}
+
+/* Banner hero */
 #hero {
     padding-top: 50px;
     padding-left: 10px;
@@ -59,83 +71,336 @@ nav ul li a:hover {
 }
 
 #hero img {
-    width: 100%; /* Ajusta a largura da imagem para 100% do contêiner pai */
-    max-width: 900px; /* Define uma largura máxima opcional para a imagem */
-    height: auto; /* Mantém a proporção da imagem */
-      
+    width: 100%; 
+    max-width: 900px; 
+    height: auto;
 }
 
-#hero p{
+#hero p {
     color: #533D3D;
-    font-weight: bold; /* Deixa o texto em negrito */
-    font-size: 20px; /* Tamanho da fonte dos links */
+    font-weight: bold;
+    font-size: 20px; 
     height: auto;
     padding-top: 20px;
-    
 }
 
+/* Banner aside */
 aside {
-    text-align: right; /* Alinha o conteúdo do aside à direita */
-    padding: 20px; /* Adiciona um padding opcional para espaçamento */
+    text-align: right;
+    padding: 20px; 
 }
 
 aside img {
-    max-width: 380px; /* Define uma largura máxima opcional para a imagem do aside */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 380px; 
     margin-top: -646px;
-    margin-right: -40px;
+    margin-right: -10px;
     padding-right: 30px;
-    
 }
 
-
-.musicaInicio img {
-    height: 70px; /* Ajusta a altura da imagem da logo */
-    /* Largura automática para manter a proporção */
+/* Seções musica e cinema */
+.musicaInicio img, .cinemaInicio img, .contatoIncio img {
+    height: 70px; 
     padding-top: 100px;
     padding-left: 100px;
 }
 
-.vinil{
-    width: 200px; /* Largura específica para a imagem Vinil */
-    height: auto; /* Mantém a proporção da imagem */
+.vinil, .TV, .telefone img {
+    width: 200px; 
+    height: auto; 
 }
 
-/* Centraliza o texto e os elementos dentro de #assuntos */
+/* Assuntos mais procurados */
 #assuntos {
-    text-align: right; /* Alinha o texto do container à direita */
-    padding-right: 50px; /* Adiciona um espaçamento interno à direita */
+    text-align: right; 
+    padding-right: 50px; 
 }
 
-/* Estiliza o parágrafo dentro de #assuntos */
 #assuntos p {
     color: #533D3D;
-    font-weight: bold; /* Deixa o texto em negrito */
-    font-size: 20px; /* Tamanho da fonte do parágrafo */
-    text-align: right; /* Alinha o texto à direita */
-    margin: 0; /* Remove a margem padrão do parágrafo */
+    font-weight: bold; 
+    font-size: 20px; 
+    text-align: right; 
+    margin: 0; 
+    margin-right: 20px;
 }
 
-/* Estiliza a classe .categoria, que parece ser usada para botões ou elementos similares */
 .categoria {
     background-color: #ffffff;
     color: #533D3D;
-    text-align: center; /* Centraliza o texto dentro do botão */
-    border-radius: 15px; /* Bordas arredondadas */
-    font-weight: bold; /* Deixa o texto em negrito */
-    font-size: 15px; /* Tamanho da fonte dos links */
-    border: 0px solid; /* Borda branca */
-    padding: 10px 20px; /* Espaço interno do botão (ajustado para ser mais compacto) */
+    text-align: center; 
+    border-radius: 15px; 
+    font-weight: bold; 
+    font-size: 15px; 
+    border: 0px solid; 
+    padding: 10px 20px; 
     font-family: 'Montserrat', sans-serif;
-    cursor: pointer; /* Cursor de mão quando passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-    height: auto; /* Ajusta a altura do botão automaticamente com base no padding e conteúdo */
-    display: inline-block; /* Permite que o botão se ajuste ao tamanho do conteúdo e se alinhe horizontalmente */
-    text-decoration: none; /* Remove o sublinhado dos links, se .categoria for usado para links */
+    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    height: auto; 
+    display: inline-block; 
+    text-decoration: none; 
 }
 
 .categoria:hover {
-    background-color: #EE4823; /* Cor ao passar o mouse */
-    transform: scale(1.05); /* Aumento sutil do botão */
+    background-color: #EE4823;
+    transform: scale(1.05); 
+}
 
+/* Notícias música */
+.notmusica img {
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+}
+
+#textomj, #textomadonna, #textoBJ, #textoSW, .textoBTF {
+    color: #533D3D;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px;
+    padding: 20px; 
+}
+
+.notmusica {
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+.notmusica img {
+    width: 300px;
+    height: 300px; 
+    border-radius: 10px; 
+}
+
+#textomj, #textomadonna, #textoBJ, #textoSW h1 {
+    margin-top: 0; 
+    margin-bottom: 10px; 
+}
+
+#textomj p, #textomadonna p, #textoBJ p, #textoSW p {
+    line-height: 1.6; 
+    color: #333; 
+    margin-top: 0; 
+    margin-bottom: 0; 
+}
+
+.box, .boxM, .boxBJ, .boxSW {
+    width: 300px; 
+    padding: 10px; 
+    border-radius: 0px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: #533D3D;
+}
+
+.box img, .boxM img, .boxBJ img, .boxSW img {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 10px; 
+}
+
+.boxindina img {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 10px; 
+}
+
+#textomj, #textomadonna, #textoBJ, #textoSW {
+    max-width: 600px; 
+}
+
+#textomj h1, #textomadonna h1, #textoBJ h1, #textoSW h1 {
+    margin-top: 0;
+    margin-bottom: 10px; 
+}
+
+#textomj a, #textomadonna a, #textoBJ a, #textoSW a {
+    color: #333; 
+    font-weight: bold; 
+}
+
+#textomj a:hover, #textomadonna a:hover, #textoBJ a:hover, #textoSW a:hover {
+    color: #EE4823; 
+}
+
+#textomj p, #textomadonna p, #textoBJ p, #textoSW p {
+    line-height: 1.6; 
+    color: #333; 
+    margin-top: 0; 
+    margin-bottom: 0; 
+}
+
+/* Banner leite */
+#leite {
+    text-align: right; 
+    margin-top: -650px; 
+    margin-bottom: 20px; 
+}
+
+#leite img {
+    height: auto; 
+}
+
+/* Cinema */
+#cinemaInicio {
+    text-align: left; 
+    padding: 20px; 
+    margin-top: 550px; 
+}
+
+/* Veja mais */
+.veja {
+    text-align: right; 
+    margin-right: 20px;
+}
+
+.veja a {
+    color: #533D3D;
+    font-weight: bold; 
+    font-size: 25px;
+}
+
+/* RPG */
+#rpg {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 20px; 
+    padding: 20px; 
+}
+
+.rpg-banner {
+    width: 800px; 
+    height: auto; 
+    max-width: 100%; 
+    margin-left: 650px;
+}
+
+.textorpg h1 {
+    text-align: right; 
+    margin: 0; 
+    margin-bottom: 10px; 
+}
+
+.textorpg p {
+    text-align: right; 
+}
+
+.textorpg h1:hover {
+    color: #EE4823; 
+}
+
+/* Estilo para as notícias em containers */
+.container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px;
+    padding: 20px; 
+}
+
+.boxBTF {
+    width: 300px; 
+    padding: 10px; 
+    border-radius: 0px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: #533D3D;
+}
+
+.boxBTF img {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 10px; 
+}
+
+#textoBTF {
+    max-width: 600px; 
+}
+
+#textoBTF h1 {
+    margin-top: 0;
+    margin-bottom: 10px; 
+}
+
+#textoBTF a {
+    color: #333; 
+    font-weight: bold; 
+}
+
+#textoBTF a:hover {
+    color: #EE4823; 
+}
+
+#textoBTF p {
+    line-height: 1.6; 
+    color: #333; 
+    margin-top: 0; 
+    margin-bottom: 0; 
+}
+
+/* Formulário de contato */
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto; 
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #F8E8C4;
+    border: 1px solid #533D3D; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #533D3D; 
+    font-weight: bold;
+}
+
+.contact-form input {
+    width: calc(100% - 22px); 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #533D3D;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form input#subject {
+    width: calc(100% - 22px); 
+    padding: 12px; 
+    text-align: center; 
+}
+
+.contact-form button {
+    background-color: #533D3D; 
+    color: #FFF; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #EE4823; 
+}
+
+/* Rodapé */
+.footer {
+    background-color: #ffffff; 
+    text-align: center; 
+    padding: 20px; 
+}
+
+.footer-img {
+    max-width: 200px; 
+    height: auto; 
+}
+
+.footer-text {
+    margin-top: 10px; 
+    font-size: 15px; 
+    color: #533D3D;
 }
