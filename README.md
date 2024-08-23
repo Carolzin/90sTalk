@@ -12,3 +12,6 @@ O site busca proporcionar uma experiência nostálgica e visualmente agradável,
 
 **HTML:** Para estruturar o conteúdo da página.<br>
 **CSS:** Para estilizar o site com elementos visuais característicos dos anos 90, incluindo cores pastéis, bordas suaves e tipografia retrô.
+
+## Site 💻
+https://github.com/user-attachments/assets/ce5e453c-b78a-4cc6-aa90-c31f343c16b9
